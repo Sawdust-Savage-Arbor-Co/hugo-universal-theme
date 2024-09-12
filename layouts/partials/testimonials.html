@@ -14,6 +14,19 @@
                   {{ .Site.Params.testimonials.subtitle | markdownify }}
                 </p>
 
+                <div class="text-center">
+                    {{ with .Site.Params.testimonials.link_url }}
+                    <a href="{{ . }}" class="btn btn-template-transparent-black btn-lg">
+                    {{ end }}
+                        {{ with .Site.Params.testimonials.link_text }}
+                        {{ . | markdownify }}
+                        {{ end }}
+                    {{ with .Site.Params.testimonials.link_url }}
+                    </a>
+                    {{ end }}
+                </div>
+                <br>
+
                 <!-- *** TESTIMONIALS CAROUSEL *** -->
 
                 <ul class="owl-carousel testimonials same-height-row"
@@ -29,11 +42,11 @@
                             </div>
                             <div class="bottom">
                                 <div class="icon">                                    
-                                    <img src="img/google-icon-logo-svg-vector.svg" alt="Google logo" class="google-logo">
+                                    <img src="{{ "img/google-icon-logo-svg-vector.svg" | relURL }}" alt="Google logo" class="google-logo">
                                     <!-- <i class="fas fa-quote-left"></i> -->
                                 </div>
                                 <div class="name-picture">
-                                    <img class="" alt="" src="{{ .avatar | absURL }}">
+                                    <!-- <img class="" alt="" src="{{ .avatar | absURL }}"> -->
                                     <h5>{{ .name }}</h5>
                                     <h5>{{ .rating }}</h5>
                                 </div>
