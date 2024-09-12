@@ -1,0 +1,29 @@
+{{ if isset .Site.Params "hero" }}
+{{ if .Site.Params.hero.enable }}
+<section class="bar background-image-fixed-2 no-mb color-white text-center">
+    <div class="dark-mask"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="text-uppercase">{{ .Site.Params.hero.title | markdownify }}</h1>
+                <p class="lead"><h2>{{ .Site.Params.hero.subtitle | markdownify }}</h2></p>
+                <p class="text-center">
+                    {{ with .Site.Params.hero.link_url }}
+                    <a href="{{ . }}" class="btn btn-template-transparent-black btn-lg">
+                    {{ end }}
+                        {{ with .Site.Params.hero.link_text }}
+                        {{ . | markdownify }}
+                        {{ end }}
+                    {{ with .Site.Params.hero.link_url }}
+                    </a>
+                    {{ end }}
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="{{ .Site.Params.hero.image }}" alt-text="{{ .Site.Params.hero.imageAlt }}" class="hero-image">
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}

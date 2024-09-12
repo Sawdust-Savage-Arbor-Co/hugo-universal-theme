@@ -28,12 +28,14 @@
                                 <p>{{ .text | markdownify }}</p>
                             </div>
                             <div class="bottom">
-                                <div class="icon"><i class="fas fa-quote-left"></i>
+                                <div class="icon">                                    
+                                    <img src="img/google-icon-logo-svg-vector.svg" alt="Google logo" class="google-logo">
+                                    <!-- <i class="fas fa-quote-left"></i> -->
                                 </div>
                                 <div class="name-picture">
                                     <img class="" alt="" src="{{ .avatar | absURL }}">
                                     <h5>{{ .name }}</h5>
-                                    <p>{{ .position }}</p>
+                                    <h5>{{ .rating }}</h5>
                                 </div>
                             </div>
                         </div>

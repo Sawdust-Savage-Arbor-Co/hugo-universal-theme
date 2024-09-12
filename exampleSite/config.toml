@@ -406,7 +406,7 @@ pluralizelisttitles = false
     longitude = "-77.028333"
 
     # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
-    style = "default"
+    style = "sawdust"
 
     # Since this template is static, the contact form uses www.formspree.io as a
     # proxy. The form makes a POST request to their servers to send the actual
@@ -455,6 +455,7 @@ pluralizelisttitles = false
 
     logo = "img/logo.png"
     logo_small = "img/logo-small.png"
+    
     contact_url = "/contact"
     address = """<p class="text-uppercase"><strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
@@ -483,6 +484,15 @@ pluralizelisttitles = false
     categories = true
     tags = true
     search = true
+
+[params.hero]
+    enable = true
+    image = "img/SawdustSavage_Emblem.png"
+    imageAlt = "Logo"
+    title = "Contact Us"
+    subtitle = "For all your tree service needs in the Greater Rochester MN area."
+    link_url = "#"
+    link_text = "Contact Us"
 
 [params.carouselCustomers]
     items = 6
