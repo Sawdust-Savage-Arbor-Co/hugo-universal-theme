@@ -457,6 +457,7 @@ pluralizelisttitles = false
     logo_small = "img/logo-small.png"
     
     contact_url = "/contact"
+    contact_text = "Contact Us"
     address = """<p class="text-uppercase"><strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
         <br>Newtown upon River
