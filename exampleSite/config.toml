@@ -533,6 +533,9 @@ pluralizelisttitles = false
     link_url = "https://google.com"
     link_text = "Write a Review"
 
+[params.gallery]
+    enable = true
+
 [params.see_more]
     enable = true
     icon = "far fa-file-alt"

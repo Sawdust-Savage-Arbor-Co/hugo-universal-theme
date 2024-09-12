@@ -1,0 +1,20 @@
+{{ if isset .Site.Params "gallery" }}
+{{ if .Site.Params.gallery.enable }}
+{{ $images := readDir "static/gallery" }}
+<div class="gallery">
+  {{ range $images }}
+  <img src="{{ .Name }}" class="card-img-top img-fluid" alt="{{ .Name }}" onclick="openModal('{{ .Name }}')">
+  {{ end }}
+</div>
+
+<!-- Modal Structure -->
+<div id="imageModal" class="modal">
+  <span class="close" onclick="closeModal()">×</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
+<!-- Include the JavaScript file -->
+<script src="/js/modal.js"></script>
+
+{{ end }}
+{{ end }}
