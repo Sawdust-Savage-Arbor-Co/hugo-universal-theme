@@ -113,10 +113,12 @@ There is the possibility to override the CSS and set your custom styles, overrid
 The optional comments system is powered by [Disqus](https://disqus.com). If you want to enable comments, create an account in Disqus and write down your shortname.
 
 ```toml
-disqusShortname = "devcows"
+[services]
+[services.disqus]
+Shortname = "devcows"
 ```
 
-You can disable the comments system by leaving the `disqusShortname` empty.
+You can disable the comments system by leaving the `Shortname` empty.
 
 
 ### Google Analytics
@@ -124,10 +126,12 @@ You can disable the comments system by leaving the `disqusShortname` empty.
 You can optionally enable Google Analytics. Type your tracking code in the ``.
 
 ```toml
-googleAnalytics = "UA-XXXXX-X"
+[services]
+[services.googleAnalytics]
+id = "UA-XXXXX-X"
 ```
 
-Leave the `googleAnalytics` key empty to disable it.
+Leave the `id` key empty to disable it.
 
 ### Logo
 
@@ -443,7 +447,7 @@ The meaning of the individual YAML keys is as follows:
 | --- | ----------- |
 | `weight` | A means to set the order of multiple features; features with a lower `weight` are displayed first (left to right, top to bottom) |
 | `name` | The title text below the feature icon; Markdown is supported |
-| `icon` | The CSS class of the feature icon; in this example we have used icons powered by [FontAwesome](http://fontawesome.io/icons/) |
+| `icon` | The CSS class of the feature icon; in this example we have used icons powered by [FontAwesome](https://fontawesome.com/icons) |
 | `url` | An optional URL the feature icon should point to; if specified, the icon will become a clickable hyperlink |
 | `description` | A short text below the title text to describe the feature; Markdown is supported |
 
@@ -614,7 +618,7 @@ The following [HTML metadata](https://www.w3schools.com/tags/tag_meta.asp) can b
 | `twitter:creator`                                        | `twitter_author`           | -                                 |
 | `twitter:site`                                           | `twitter_site`             | `twitter_site`                    |
 
-Besides, certain [Open Graph](http://ogp.me/) metadata is automatically set:
+Besides, certain [Open Graph](https://ogp.me/) metadata is automatically set:
 
 - `article:published_time`, `article:modified_time`, `og:updated_time` and `article:expiration_time` are set based on [Hugo's (predefined) front matter variables `date`, `publishDate`, `lastmod` and `expiryDate`](https://gohugo.io/content-management/front-matter/#predefined).
 - `article:section` and `article:tag` are set based on [Hugo's `categories` and `tags` taxonomies](https://gohugo.io/content-management/taxonomies/#default-taxonomies). Since there can only be one `article:section`, only the first element of the `categories` array is used as `article:section`.
