@@ -35,7 +35,7 @@ function contactFormAjax () {
         $this[0].reset() // clear form
 
         $('#contact-message')
-          .html('<div class="alert alert-success" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>Thank you for getting in touch. We will get back to you soon!</div>')
+          .html('<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>Thank you for getting in touch. We will get back to you soon!</div>')
           .fadeIn()
       }
       , 'json')
@@ -83,11 +83,16 @@ function sliderHomepage () {
     // var owl = $('#slider')
 
     $('#slider').owlCarousel({
-      autoPlay: 3000,
+      autoplay: true,
+      autoplayTimeout: 3000,
       items: 4,
-      itemsDesktopSmall: [900, 3],
-      itemsTablet: [600, 3],
-      itemsMobile: [500, 2]
+      responsive: {
+        0: { items: 2 },
+        500: { items: 2 },
+        600: { items: 3 },
+        900: { items: 3 },
+        1200: { items: 4 }
+      }
     })
   }
 }
@@ -97,38 +102,42 @@ function sliders () {
   if ($('.owl-carousel').length) {
     $('.customers').owlCarousel({
       items: ($('.customers').attr('data-items') || 6),
-      slideSpeed: ($('.customers').attr('data-slide-speed') || 2000),
-      paginationSpeed: ($('.customers').attr('data-pagination-speed') || 1000),
-      autoPlay: $('.customers').attr('data-autoplay') === 'true',
-      itemsDesktopSmall: [990, 4],
-      itemsTablet: [768, 2],
-      itemsMobile: [480, 1]
+      slideBy: 1,
+      smartSpeed: ($('.customers').attr('data-slide-speed') || 2000),
+      autoplay: $('.customers').attr('data-autoplay') === 'true',
+      responsive: {
+        0: { items: 1 },
+        480: { items: 1 },
+        768: { items: 2 },
+        990: { items: 4 }
+      }
     })
 
     $('.testimonials').owlCarousel({
       items: ($('.testimonials').attr('data-items') || 4),
-      slideSpeed: ($('.testimonials').attr('data-slide-speed') || 2000),
-      paginationSpeed: ($('.testimonials').attr('data-pagination-speed') || 1000),
-      autoPlay: $('.testimonials').attr('data-autoplay') === 'true',
-      itemsDesktopSmall: [990, 3],
-      itemsTablet: [768, 2],
-      itemsMobile: [480, 1]
+      smartSpeed: ($('.testimonials').attr('data-slide-speed') || 2000),
+      autoplay: $('.testimonials').attr('data-autoplay') === 'true',
+      responsive: {
+        0: { items: 1 },
+        480: { items: 1 },
+        768: { items: 2 },
+        990: { items: 3 }
+      }
     })
 
     $('.homepage').owlCarousel({
-      navigation: false, // Show next and prev buttons
-      navigationText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
-      slideSpeed: ($('.homepage').attr('data-slide-speed') || 2000),
-      paginationSpeed: ($('.homepage').attr('data-pagination-speed') || 1000),
-      autoPlay: ($('.homepage').attr('data-autoplay') || 'true') === 'true',
-      stopOnHover: true,
-      singleItem: true,
+      nav: false,
+      navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
+      smartSpeed: ($('.homepage').attr('data-slide-speed') || 2000),
+      autoplay: ($('.homepage').attr('data-autoplay') || 'true') === 'true',
+      autoplayHoverPause: true,
+      items: 1,
+      loop: false,
       lazyLoad: false,
-      addClassActive: true,
-      afterInit: function () {
+      onInitialized: function () {
         // animationsSlider()
       },
-      afterMove: function () {
+      onTranslated: function () {
         // animationsSlider()
       }
     })
@@ -246,7 +255,9 @@ function fullScreenContainer () {
 
 function utils () {
   /* tooltips */
-  $('[data-toggle="tooltip"]').tooltip()
+  $('[data-bs-toggle="tooltip"]').each(function () {
+    new bootstrap.Tooltip(this)
+  })
 
   /* click on the box activates the radio */
   $('#checkout').on('click', '.box.shipping-method, .box.payment-method', function () {

@@ -29,12 +29,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-.pull-right {
-  float: right !important;
-}
-.pull-left {
-  float: left !important;
-}
 .hide {
   display: none !important;
 }
@@ -389,54 +383,7 @@ ul.list-style-none {
     left: 0;
   }
 }
-.navbar .yamm-content h3 {
-  font-size: 18px;
-  text-transform: uppercase;
-  padding-bottom: 10px;
-  margin-top: 5px;
-  border-bottom: dotted 1px #555555;
-  letter-spacing: 0.08em;
-}
 @media (max-width: 767px) {
-  .navbar .yamm-content h3 {
-    font-size: 14px;
-  }
-}
-.navbar .yamm-content h5 {
-  text-transform: uppercase;
-  padding-bottom: 10px;
-  border-bottom: dotted 1px #555555;
-  letter-spacing: 0.08em;
-}
-.navbar .yamm-content ul {
-  margin: 0;
-  padding: 0;
-}
-.navbar .yamm-content ul li {
-  list-style-type: none;
-  border-bottom: solid 1px #eeeeee;
-  text-transform: uppercase;
-  padding: 4px 0;
-}
-.navbar .yamm-content ul li a {
-  position: relative;
-  color: #999999;
-  font-size: 12px;
-  display: block;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-.navbar .yamm-content ul li a:hover {
-  color: var(--primary-accent);
-  text-decoration: none;
-  padding-left: 2px;
-}
-.navbar .yamm-content .banner {
-  margin-bottom: 10px;
-}
-.navbar .yamm-fw .dropdown-menu {
-  padding: 0;
 }
 .navbar .navbar-buttons {
   float: right;
@@ -870,204 +817,6 @@ fieldset[disabled] .btn-template-primary.active {
   border-bottom: solid 1px #eeeeee;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-}
-.panel.sidebar-menu h3 {
-  padding: 5px 0;
-  margin: 0;
-}
-.panel.sidebar-menu {
-  background: #fff;
-  margin: 0 0 20px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.panel.sidebar-menu .panel-heading {
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  background: none;
-  padding: 0;
-  letter-spacing: 0.08em;
-  border-bottom: none;
-}
-.panel.sidebar-menu .panel-heading h1,
-.panel.sidebar-menu .panel-heading h2,
-.panel.sidebar-menu .panel-heading h3,
-.panel.sidebar-menu .panel-heading h4,
-.panel.sidebar-menu .panel-heading h5 {
-  display: inline-block;
-  border-bottom: solid 5px var(--primary-accent);
-  line-height: 1.1;
-  margin-bottom: 0;
-  padding-bottom: 10px;
-}
-.panel.sidebar-menu .panel-heading .btn.btn-danger {
-  color: #fff;
-  margin-top: 5px;
-}
-.panel.sidebar-menu .panel-body {
-  padding: 0;
-}
-.panel.sidebar-menu .panel-body span.colour {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  border: solid 1px #555555;
-  vertical-align: top;
-  margin-top: 2px;
-  margin-left: 5px;
-}
-.panel.sidebar-menu .panel-body span.colour.white {
-  background: #fff;
-}
-.panel.sidebar-menu .panel-body span.colour.red {
-  background: red;
-}
-.panel.sidebar-menu .panel-body span.colour.green {
-  background: green;
-}
-.panel.sidebar-menu .panel-body span.colour.blue {
-  background: blue;
-}
-.panel.sidebar-menu .panel-body span.colour.yellow {
-  background: yellow;
-}
-.panel.sidebar-menu .panel-body label {
-  color: #999999;
-  font-size: 12px;
-}
-.panel.sidebar-menu .panel-body label:hover {
-  color: #555555;
-}
-.panel.sidebar-menu ul.nav.category-menu {
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-.panel.sidebar-menu ul.nav.category-menu li a {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-}
-.panel.sidebar-menu ul.nav ul {
-  list-style: none;
-  padding-left: 0;
-}
-.panel.sidebar-menu ul.nav ul li {
-  display: block;
-}
-.panel.sidebar-menu ul.nav ul li a {
-  position: relative;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: normal;
-  text-transform: none !important;
-  display: block;
-  padding: 10px 15px;
-  padding-left: 30px;
-  font-size: 12px;
-  color: #999999;
-}
-.panel.sidebar-menu ul.nav ul li a:hover,
-.panel.sidebar-menu ul.nav ul li a:focus {
-  text-decoration: none;
-  background-color: #eeeeee;
-}
-.panel.sidebar-menu ul.tag-cloud {
-  list-style: none;
-  padding-left: 0;
-}
-.panel.sidebar-menu ul.tag-cloud li {
-  display: inline-block;
-}
-.panel.sidebar-menu ul.tag-cloud li a {
-  display: inline-block;
-  padding: 5px;
-  border: solid 1px #eeeeee;
-  border-radius: 0;
-  color: var(--primary-accent);
-  margin: 5px 5px 5px 0;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 700;
-  font-size: 12px;
-  text-decoration: none;
-}
-.panel.sidebar-menu ul.tag-cloud li a:hover {
-  color: var(--primary-accent);
-  border-color: var(--primary-accent);
-}
-.panel.sidebar-menu ul.tag-cloud li.active a {
-  color: #FFFFFF;
-  background-color: var(--primary-accent);
-}
-.panel.sidebar-menu ul.tag-cloud li.active a:hover {
-  color: #FFFFFF;
-}
-.panel.sidebar-menu ul.popular,
-.panel.sidebar-menu ul.recent {
-  list-style: none;
-  padding-left: 0;
-  padding: 20px 0;
-}
-.panel.sidebar-menu ul.popular li,
-.panel.sidebar-menu ul.recent li {
-  margin-bottom: 10px;
-  padding: 5px 0;
-  border-bottom: dotted 1px #eeeeee;
-}
-.panel.sidebar-menu ul.popular li:before,
-.panel.sidebar-menu ul.recent li:before,
-.panel.sidebar-menu ul.popular li:after,
-.panel.sidebar-menu ul.recent li:after {
-  content: " ";
-  display: table;
-}
-.panel.sidebar-menu ul.popular li:after,
-.panel.sidebar-menu ul.recent li:after {
-  clear: both;
-}
-.panel.sidebar-menu ul.popular li:before,
-.panel.sidebar-menu ul.recent li:before,
-.panel.sidebar-menu ul.popular li:after,
-.panel.sidebar-menu ul.recent li:after {
-  content: " ";
-  display: table;
-}
-.panel.sidebar-menu ul.popular li:after,
-.panel.sidebar-menu ul.recent li:after {
-  clear: both;
-}
-.panel.sidebar-menu ul.popular li img,
-.panel.sidebar-menu ul.recent li img {
-  width: 50px;
-  margin-right: 10px;
-}
-.panel.sidebar-menu ul.popular li h5,
-.panel.sidebar-menu ul.recent li h5 {
-  margin: 0 0 10px;
-}
-.panel.sidebar-menu ul.popular li h5 a,
-.panel.sidebar-menu ul.recent li h5 a {
-  font-weight: normal;
-}
-.panel.sidebar-menu ul.popular li p.date,
-.panel.sidebar-menu ul.recent li p.date {
-  float: right;
-  font-size: 12px;
-  color: #999999;
-}
-.panel.sidebar-menu ul.popular li:last-child,
-.panel.sidebar-menu ul.recent li:last-child {
-  border-bottom: none;
-}
-.panel.sidebar-menu .text-widget {
-  font-size: 12px;
-}
-.panel.sidebar-menu.with-icons ul.nav li a:after {
-  font-family: 'FontAwesome';
-  content: "\f105";
-  position: relative;
-  top: 0;
-  float: right;
 }
 /* ribbons for product sales etc. */
 .ribbon {
@@ -2951,21 +2700,6 @@ fieldset[disabled] .btn-template-primary.active {
     margin-left: -15px;
   }
 }
-.navbar-toggle {
-  position: relative;
-  float: right;
-  margin-right: 15px;
-  padding: 9px 10px;
-  margin-top: 14px;
-  margin-bottom: 14px;
-  background-color: transparent;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 0;
-}
-.navbar-toggle:focus {
-  outline: 0;
-}
 .navbar-nav {
   margin: 10.5px -15px;
 }
@@ -3113,16 +2847,6 @@ fieldset[disabled] .btn-template-primary.active {
   color: #cccccc;
   background-color: transparent;
 }
-.navbar-default .navbar-toggle {
-  border-color: #dddddd;
-}
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  background-color: var(--primary-accent);
-}
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #888888;
-}
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
   border-color: #cccccc;
@@ -3234,10 +2958,6 @@ hr {
   border-radius: 0;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-}
-.dropdown-menu.pull-right {
-  right: 0;
-  left: auto;
 }
 .dropdown-menu .divider {
   height: 1px;
@@ -3465,21 +3185,6 @@ address {
   margin-bottom: 20px;
   line-height: 1.42857143;
 }
-.panel {
-  margin-bottom: 20px;
-  background-color: #ffffff;
-  border: 1px solid transparent;
-  border-radius: 0;
-  -webkit-box-shadow: 0 0 0;
-  box-shadow: 0 0 0;
-}
-.panel-heading {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 15px 15px;
-}
 .progress {
   overflow: hidden;
   height: 20px;
@@ -3488,45 +3193,6 @@ address {
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
-}
-.panel-group {
-  margin-bottom: 20px;
-}
-.panel-group .panel {
-  margin-bottom: 0;
-  border-radius: 0;
-  overflow: hidden;
-}
-.panel-group .panel + .panel {
-  margin-top: 5px;
-}
-.panel-group.accordion .panel {
-  border-color: #ccc;
-}
-.panel-primary {
-  border-color: var(--primary-accent);
-}
-.panel-primary > .panel-heading {
-  color: #ffffff;
-  background-color: var(--primary-accent);
-  border-color: var(--primary-accent);
-}
-.panel-primary > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: var(--primary-accent);
-}
-.panel-primary > .panel-heading .badge {
-  color: var(--primary-accent);
-  background-color: #ffffff;
-}
-.panel-primary > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: var(--primary-accent);
-}
-.panel-primary .panel-title {
-  font-weight: 300;
-}
-.panel-primary .panel-title a:hover {
-  color: #fff;
-  text-decoration: none;
 }
 a.badge:hover,
 a.badge:focus {
@@ -3549,33 +3215,4 @@ a.list-group-item.active > .badge,
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-}
-/*!
- * Yamm!3 - Yet another megamenu for Bootstrap 3
- * http://geedmo.github.com/yamm3
- *
- * @geedmo - Licensed under the MIT license
- */
-.yamm .nav,
-.yamm .collapse,
-.yamm .dropup.use-yamm,
-.yamm .dropdown.use-yamm {
-  position: static;
-}
-.yamm .container {
-  position: relative;
-}
-.yamm .dropdown-menu {
-  left: auto;
-}
-.yamm .nav.navbar-right .dropdown-menu {
-  left: auto;
-  right: 0;
-}
-.yamm .yamm-content {
-  padding: 20px 30px;
-}
-.yamm .dropdown.yamm-fw .dropdown-menu {
-  left: 15px;
-  right: 15px;
 }

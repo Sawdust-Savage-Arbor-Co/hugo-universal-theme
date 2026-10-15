@@ -7,7 +7,7 @@
 
             {{ .Site.Params.about_us | safeHTML }}
 
-            <hr class="hidden-md hidden-lg hidden-sm">
+            <hr class="d-md-none">
 
         </div>
         <!-- /.col-md-4 -->
@@ -24,9 +24,9 @@
                     <div class="image same-height-always">
                         <a href="{{ .Permalink }}">
                           {{ if isset .Params "banner" }}
-                            <img src="{{ .Params.banner | relURL }}" class="img-responsive" alt="{{ .Title }}" />
+                            <img src="{{ .Params.banner | relURL }}" class="img-fluid" alt="{{ .Title }}" />
                           {{ else }}
-                            <img src="{{ "img/placeholder.png" | relURL }}" class="img-responsive" alt="{{ .Title }}" />
+                            <img src="{{ "img/placeholder.png" | relURL }}" class="img-fluid" alt="{{ .Title }}" />
                           {{ end }}
                         </a>
                     </div>
@@ -37,7 +37,7 @@
                 {{ end }}
             </div>
 
-            <hr class="hidden-md hidden-lg">
+            <hr class="d-md-none">
             {{ end }}{{ end }}
 
         </div>
@@ -48,11 +48,11 @@
 
           <h4>{{ i18n "contactTitle" }}</h4>
 
-            {{ .Site.Params.address | safeHTML }}
+			{{ .Site.Params.address | safeHTML }}
 
-	    <a href="{{ default "/contact" .Site.Params.contact_url }}" class="btn btn-small btn-template-main">{{ .Site.Params.contact_text }}</a>
+		<a href="{{ default "/contact" .Site.Params.contact_url }}" class="btn btn-small btn-template-main">{{ .Site.Params.contact_text }}</a>
 
-            <hr class="hidden-md hidden-lg hidden-sm">
+			<hr class="d-md-none">
 
         </div>
         <!-- /.col-md-4 -->
@@ -73,9 +73,9 @@ _________________________________________________________ -->
     <div class="container">
         <div class="col-md-12">
             {{ if isset .Site.Params "copyright" }}
-            <p class="pull-left">{{ replace .Site.Params.copyright "{year}" (now.Format "2006") | safeHTML }}</p>
+            <p class="float-start">{{ replace .Site.Params.copyright "{year}" (now.Format "2006") | safeHTML }}</p>
             {{ end }}
-            <p class="pull-right">
+            <p class="float-end">
                 
               {{ i18n "templateBy" | markdownify }} <a href="https://bootstrapious.com/p/universal-business-e-commerce-template">Bootstrapious</a>.
               <!-- Not removing this link is part of the licence conditions of the template. Thanks for understanding :) -->

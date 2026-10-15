@@ -1,13 +1,13 @@
 {{ if .Site.Params.widgets.tags }}
 {{ if isset .Site.Taxonomies "tags" }}
 {{ if not (eq (len .Site.Taxonomies.tags) 0) }}
-<div class="panel sidebar-menu">
+<div class="card sidebar-menu">
 
-    <div class="panel-heading">
-        <h3 class="panel-title">{{ i18n "tagsTitle" }}</h3>
+    <div class="card-header">
+        <h3 class="card-title">{{ i18n "tagsTitle" }}</h3>
     </div>
 
-    <div class="panel-body">
+    <div class="card-body">
         <ul class="tag-cloud">
             {{ $current := . }}
             {{ range $name, $items := .Site.Taxonomies.tags }}
