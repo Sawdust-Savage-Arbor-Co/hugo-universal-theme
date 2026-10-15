@@ -14,7 +14,7 @@ Sponsor this project:
 1My6zRZA4YKdX78aiZKZhWUWfFmCSDafZ6
 ```
 
-This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/universal-business-e-commerce-template) for training and fun. It has a very nice and customizable landing page, a comments system by Disqus, site search by Google, contact forms by Formspree, Google Analytics, and optional widgets for the sidebar.
+a comments system by Disqus, site search by Google, Google Analytics, and optional widgets for the sidebar.
 
 ![screenshot](https://raw.githubusercontent.com/devcows/hugo-universal-theme/master/images/screenshot.png)
 
@@ -62,7 +62,6 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
   * Features
   * Customers
   * Recent posts
-* Contact form by Formspree
 * Google search
 * Disqus comments
 * Google Analytics
@@ -171,19 +170,6 @@ Example configuration:
     latitude = "-12.043333"
     longitude = "-77.028333"
     direction = "Desamparados Station, Distrito de Lima 15001, Peru"
-```
-
-Since Hugo sites are static, the contact form uses [Formspree](https://formspree.io/) as a proxy. The form makes a POST request to their servers to send the actual email. Formspree and the submissions for the free plan are limited, [checkout the plans for details](https://formspree.io/plans).
-
-To enable the form in the contact page, just type your Formspree email in the `config.toml` file, and specify whether to use ajax(paid) to send request or plain HTTP POST(free). Also there is the possibility to enable a captcha using recaptcha.
-
-```toml
-[params]
-    email = "your@email.com"
-    contact_form_ajax = false
-
-    enableRecaptchaInContactForm = true
-    googleRecaptchaKey = "site_key_for_google_recaptcha"
 ```
 
 ### Menu
