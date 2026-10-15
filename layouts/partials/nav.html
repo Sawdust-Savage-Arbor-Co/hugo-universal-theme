@@ -21,7 +21,7 @@
             <!--/.navbar-header -->
 
             <div class="navbar-collapse collapse" id="navigation">
-                <ul class="navbar-nav ms-auto">
+                <ul class="nav navbar-nav ms-auto">
                   {{ $current := . }}
 
                   {{ range .Site.Menus.main.ByWeight }}
@@ -54,8 +54,8 @@
                         </ul>
                     </li>
                   {{ else }}
-                  <li class="dropdown {{ $active }}">
-                    <a href="{{ .URL }}">{{ .Name }}</a>
+                  <li class="nav-item {{ $active }}">
+                    <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
                   </li>
                   {{ end }}
                   {{ end }}
